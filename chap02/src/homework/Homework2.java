@@ -8,13 +8,13 @@ public class Homework2 {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("가로 : ");
-		double width = Double.parseDouble(sc.nextLine());
+		double width = sc.nextDouble();
 		
 		System.out.print("세로 : ");
-		double height = Double.parseDouble(sc.nextLine());
+		double height = sc.nextDouble();
 		
-		System.out.printf("면적 : %6.2f\n", (width*height));
-		System.out.printf("둘레 : %5.1f", ((width+height)*2));
+		System.out.printf("면적 : %.2f\n", width * height);
+		System.out.printf("둘레 : %.1f\n", (width + height) * 2);
 	}
 
 }

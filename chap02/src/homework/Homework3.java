@@ -10,13 +10,9 @@ public class Homework3 {
 		System.out.print("문자열을 입력하세요 : ");
 		String str = sc.nextLine();
 		
-		char first = str.charAt(0);
-		char second = str.charAt(1);
-		char third = str.charAt(2);
-		
-		System.out.println("첫번째 문자 : " + first);
-		System.out.println("첫번째 문자 : " + second);
-		System.out.println("첫번째 문자 : " + third);
+		System.out.println("첫번째 문자 : " + str.charAt(0));
+		System.out.println("첫번째 문자 : " + str.charAt(1));
+		System.out.println("첫번째 문자 : " + str.charAt(2));
 	}
 
 }

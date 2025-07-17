@@ -8,12 +8,15 @@ public class Homework1 {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("몸무게(kg) : ");
-		double weight = Double.parseDouble(sc.nextLine());
+		double weight = sc.nextDouble();
 		
 		System.out.print("키(m) : ");
-		double height = Double.parseDouble(sc.nextLine());
+		double height = sc.nextDouble();
 		
-		System.out.printf("BMI 지수 : %4.1f", (weight/(height*height)));
+		double bmi = weight/(height*height);
+		System.out.printf("BMI 지수 : %.1f\n", bmi);
+		System.out.println("BMI 지수 : " + (int) (bmi * 10) / 10.0);
+		System.out.println("BMI 지수 : " + Math.floor(bmi * 10) / 10);
 		
 	}
 
