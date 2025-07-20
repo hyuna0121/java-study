@@ -29,11 +29,17 @@ public class ContinueExample {
 //		영희야생일축하해!
 		
 		Scanner sc = new Scanner(System.in);
+		System.out.print("입력 : ");
 		String str = sc.nextLine();
 		int length = str.length();
+		char temp;
 		
+		System.out.print("출력 : ");
 		for (int i = 0; i < length; i++) {
-			str.charAt(0);
+			temp = str.charAt(i);
+			if (temp == ' ')
+				continue;
+			System.out.print(temp);
 		}
 	}
 
