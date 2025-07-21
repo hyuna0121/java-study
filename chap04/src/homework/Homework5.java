@@ -15,6 +15,12 @@ public class Homework5 {
 		Scanner sc = new Scanner(System.in);
 		int num = sc.nextInt();
 		
+		// Early Return
+//		if (num < 0) {
+//			System.out.println("양수만 입력해주세요.");
+//			return;
+//		}
+		
 		if (num == 1) {
 			System.out.println("스쿼드 운동 시간입니다.");			
 		} else if (num == 2) {

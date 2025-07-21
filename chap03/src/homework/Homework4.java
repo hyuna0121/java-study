@@ -12,12 +12,14 @@ public class Homework4 {
 		int math = sc.nextInt();
 		System.out.print("영어 : ");
 		int eng = sc.nextInt();
-		int total = kor + math + eng;
-		int avg = total/3;
 		
-		System.out.println("합계 : " + total);
-		System.out.println("평균 : " + avg);
-		System.out.println("휴대폰을 바꿀 수 " + ((avg >= 90) ? "있습니다." : "없습니다."));
+		int total = kor + math + eng;
+		double avg = total / 3.0;
+		boolean canChange = (kor >= 60 && math >= 60 && eng >= 60 && avg >= 90) ? true : false;
+		
+		System.out.println("합계 : " + total + "점");
+		System.out.println("평균 : " + avg + "점");
+		System.out.println("휴대폰을 바꿀 수 " + (canChange ? "있습니다." : "없습니다."));
 	}
 
 }

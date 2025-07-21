@@ -22,6 +22,7 @@ public class Homework6 {
 		
 		int total = des + dev + db + lang + sys;
 		
+		// Early Return
 		if (des < 40) {
 			System.out.println("소프트웨어설계과목 과락으로 불합격입니다.");
 		} else if (dev < 40) {
@@ -32,10 +33,10 @@ public class Homework6 {
 			System.out.println("프로그래밍언어활용과목 과락으로 불합격입니다.");
 		} else if (sys < 40) {
 			System.out.println("정보시스템구축관리과목 과락으로 불합격입니다.");
-		} else if (total/5 >= 60) {
-				System.out.println("합격을 축하합니다!");
-		} else {
+		} else if (total / 5.0 < 60) {
 				System.out.println("평균 점수 60점 미만으로 불합격입니다.");
+		} else {
+				System.out.println("합격을 축하합니다!");
 			}
 		
 	}

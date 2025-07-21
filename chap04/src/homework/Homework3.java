@@ -15,13 +15,8 @@ public class Homework3 {
 		System.out.print("세 번째 정수 : ");
 		int thi = sc.nextInt();
 		
-		if (fir > sec) {
-			fir = sec;
-		}
-		
-		if (fir > thi) {
-			fir = thi;
-		}
+		if (fir > sec) fir = sec;
+		if (fir > thi) fir = thi;
 		
 		System.out.println("세 수 중에서 가장 작은 수는 " + fir + "입니다.");
 	}
