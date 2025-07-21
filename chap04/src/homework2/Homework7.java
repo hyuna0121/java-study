@@ -6,6 +6,7 @@ public class Homework7 {
 
 	public static void main(String[] args) {
 		boolean flag = true;
+		boolean answerFlag = true;
 		Scanner sc = new Scanner(System.in);
 		String str;
 		String answer;
@@ -24,13 +25,20 @@ public class Homework7 {
 			}
 			
 			System.out.println("포함된 개수 : " + count);
-			System.out.print("다시 입력하시겠습니까? ");
-			answer = sc.nextLine();
-			
-			if (answer == "Y" || answer == "y") {
-				continue;
-			} else {
-				flag = false;
+			answerFlag = true;
+			while (answerFlag) {
+				System.out.print("다시 입력하시겠습니까? : ");
+				answer = sc.nextLine();
+				
+				if ("Y".equals(answer) || "y".equals(answer)) {
+					flag = true;
+					answerFlag = false;
+				} else if ("N".equals(answer) || "n".equals(answer)){
+					flag = false;
+					answerFlag = false;
+				} else {
+					System.out.println("잘못된 대답입니다. 다시 입력해주세요.");
+				}
 			}
 		}
 	}
