@@ -1,20 +1,24 @@
 package homework2;
 
+import java.util.Scanner;
+
 public class Homework5 {
 
 	public static void main(String[] args) {
-		for (int i = 4; i >= 0; i--) {
-			for (int j = i; j > 0; j--) {
-				System.out.print(" ");
-			}
-			for (int k = 9 - 2 * i; k > 0; k--) {
-				System.out.print("*");
-			}
-			for (int j = i; j > 0; j--) {
-				System.out.print(" ");
-			}
-			System.out.println();
+		boolean flag = true;
+		Scanner sc = new Scanner(System.in);
+		int num = 0;
+		int sum = 0;
+	
+		while (flag) {
+			System.out.print("숫자 (0을 입력하면 종료) : ");
+			num = sc.nextInt();
+			if (num > 0) {
+				sum += num;
+			} else if (num == 0) flag = false;
 		}
+		
+		System.out.println("양수의 합계 : " + sum);
 	}
 
 }

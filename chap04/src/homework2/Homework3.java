@@ -9,12 +9,12 @@ public class Homework3 {
 		String answer;
 		
 		do {
-			System.out.println("게임을 실행합니다!");
-			System.out.println("게임을 다시 플레이하시겠습니까? (yes/no) : ");
+			System.out.print("입력 : ");
 			answer = sc.nextLine();
-		} while ("yes".equals(answer));
+			System.out.println(answer);
+		} while (!"탈출".equals(answer));
 		
-		System.out.println("게임을 종료합니다.");
+		System.out.println("프로그램 종료");
 	}
 
 }
