@@ -16,7 +16,10 @@ public class Homework4 {
 			if (i == 0) lotto[i] = num;			
 			else {	
 				for (int var : lotto) {
-					if (var == num) dup = 1; 
+					if (var == num) {
+						dup = 1;
+						break;
+					}
 				}
 			}
 			
