@@ -5,19 +5,18 @@ import java.util.Scanner;
 public class Homework5 {
 
 	public static void main(String[] args) {
-		boolean flag = true;		
 		String input = "";
 		String[] choices = {"가위", "바위", "보"};
+		int choice = 0;
 		int count = 0;
 		int win = 0;
 		int lose = 0;
 		Scanner sc = new Scanner(System.in);
 
-		while(flag) {
+		while(true) {
 			System.out.print("가위바위보 : ");
 			input = sc.nextLine();
 			if ("stop".equals(input)) {
-				flag = false;
 				break;
 			} else if ("가위".equals(input) || "바위".equals(input) || "보".equals(input)) {
 			} else {
@@ -26,7 +25,7 @@ public class Homework5 {
 				continue;
 			}
 			
-			int choice = (int) (Math.random() * 3);
+			choice = (int) (Math.random() * 3);
 			System.out.println("컴퓨터 : " + choices[choice]);
 			System.out.println("사용자 : " + input);
 			count++;

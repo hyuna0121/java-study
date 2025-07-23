@@ -12,16 +12,18 @@ public class Homework4 {
 		for (int i = 0; i < lotto.length; ) {
 			num = (int) (Math.random() * 45) + 1;
 			dup = 0;
+			
 			if (i == 0) lotto[i] = num;			
 			else {	
 				for (int var : lotto) {
 					if (var == num) dup = 1; 
 				}
 			}
+			
 			if (dup != 1) {
 				lotto[i] = num;
 				i++;
-			}
+			} else continue;
 		}
 		
 		Arrays.sort(lotto);

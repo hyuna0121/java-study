@@ -5,18 +5,15 @@ import java.util.Scanner;
 public class Homework3 {
 
 	public static void main(String[] args) {
-		boolean flag = true;
 		int num = 0;
 		Scanner sc = new Scanner(System.in);
 		
-		while (flag) {
+		while (true) {
 			System.out.print("정수 : ");
 			num = Integer.parseInt(sc.nextLine());
-			if (num % 2 == 1 && num >= 3) {
-				flag = false;
-			} else {
-				System.out.println("다시 입력하세요.");
-			}
+			
+			if (num % 2 == 1 && num >= 3) break;
+			else System.out.println("다시 입력하세요.");
 		}
 		
 		int[] arr = new int[num];

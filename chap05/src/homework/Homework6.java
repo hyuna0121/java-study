@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Homework6 {
 
 	public static void main(String[] args) {
-		boolean flag = true;
 		int i = 0;
 		String answer = "";
 		int extra;
@@ -21,11 +20,11 @@ public class Homework6 {
 			arr[i] = sc.nextLine();
 		}
 		
-		while (flag) {
+		while (true) {
 			System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
 			answer = sc.nextLine();
 			
-			if ("Y".equals(answer) || "y".equals(answer)) {
+			if ("Y".equalsIgnoreCase(answer)) {
 				System.out.print("더 입력하고 싶은 개수 : ");
 				extra = Integer.parseInt(sc.nextLine());
 				size += extra;
@@ -36,12 +35,9 @@ public class Homework6 {
 					arr[j] = sc.nextLine();
 				}
 				
-			} else if ("N".equals(answer) || "n".equals(answer)) {
-				flag = false;
-				break;
-			} else {
-				System.out.println("입력할 수 없는 값입니다.");
-			}
+			} 
+			else if ("N".equalsIgnoreCase(answer)) break;
+			else System.out.println("입력할 수 없는 값입니다.");
 		}
 		
 		for (String temp : arr) {
