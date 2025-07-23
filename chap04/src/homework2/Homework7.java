@@ -17,8 +17,7 @@ public class Homework7 {
 		}
 		
 		for (int i = 1; i <= num; i++) {
-			if (i % 2 == 1) System.out.print("박");
-			else System.out.print("수");
+			System.out.print(i % 2 != 0 ? "박" : "수");
 		}
 	}
 
