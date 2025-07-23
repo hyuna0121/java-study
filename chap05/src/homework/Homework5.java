@@ -22,6 +22,7 @@ public class Homework5 {
 			} else if ("가위".equals(input) || "바위".equals(input) || "보".equals(input)) {
 			} else {
 				System.out.println("잘못 입력하셨습니다.");
+				System.out.println();
 				continue;
 			}
 			
@@ -41,6 +42,7 @@ public class Homework5 {
 				System.out.println("졌습니다 ㅠㅠ");
 				lose++;
 			}
+			System.out.println();
 		}
 		
 		System.out.println(count + "전 " + win + "승 " + (count - win - lose) + "무 " + lose + "패");

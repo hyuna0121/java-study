@@ -18,7 +18,7 @@ public class Homework8 {
 		
 		System.out.println();
 		
-		System.out.print("오 메뉴판 : ");
+		System.out.print("오늘 메뉴판 : ");
 		for (String str : todayMenu) {
 			System.out.print(str + " ");
 		}

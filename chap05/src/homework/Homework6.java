@@ -22,7 +22,7 @@ public class Homework6 {
 		}
 		
 		while (flag) {
-			System.out.println("더 값을 입력하시겠습니까?(Y/N) : ");
+			System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
 			answer = sc.nextLine();
 			
 			if ("Y".equals(answer) || "y".equals(answer)) {

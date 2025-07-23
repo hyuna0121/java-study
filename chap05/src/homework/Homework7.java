@@ -11,14 +11,14 @@ public class Homework7 {
 		 
 		 System.out.print("원본 보고서 : ");
 		 for (String str : report) {
-			 System.out.print(str + ", ");
+			 System.out.print(str + " ");
 		 }
 		 
 		 System.out.println();
 		 
 		 System.out.print("복사된 보고서 : ");
 		 for (String str : arr) {
-			 System.out.print(str + ", ");
+			 System.out.print(str + " ");
 		 }
 	}
 
