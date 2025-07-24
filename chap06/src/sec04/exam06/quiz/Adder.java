@@ -1,11 +1,12 @@
 package sec04.exam06.quiz;
 
 public class Adder {
-	int add(int x, int y) {
+	// 메소드 오버로딩
+	public int add(int x, int y) {
 		return x + y;
 	}
 	
-	double add(double x, double y) {
+	public double add(double x, double y) {
 		return x + y;
 	}
 }
