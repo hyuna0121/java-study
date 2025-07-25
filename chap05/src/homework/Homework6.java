@@ -44,5 +44,23 @@ public class Homework6 {
 			System.out.println(temp);
 		}
 	}
+	
+	/* 직접 복사하는 방법
+	// 새 배열 생성
+	String[] newArr = new String[arr.length + addCount];
 
+	// 기존 배열 복사
+	for (int i = 0; i < arr.length; i++) {
+	    newArr[i] = arr[i];
+	}
+
+	// 새 입력값 저장
+	for (int i = arr.length; i < newArr.length; i++) {
+	    System.out.print((i + 1) + "번째 문자열: ");
+	    newArr[i] = sc.nextLine();
+	}
+
+	// 배열 교체
+	arr = newArr;
+	*/
 }
