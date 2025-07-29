@@ -12,15 +12,9 @@ public class Employee extends Person {
 		this.dept = dept;
 	}
 	
-	@Override
-	public String toString() {
-		return "";
-	}
-	
 	public int getSalary() {
 		return salary;
 	}
-	
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
@@ -28,9 +22,13 @@ public class Employee extends Person {
 	public String getDept() {
 		return dept;
 	}
-	
 	public void setDept(String dept) {
 		this.dept = dept;
+	}
+	
+	@Override
+	public String toString() {
+		return "Employee [salary=" + salary + ", dept=" + dept + "]";
 	}
 	
 }

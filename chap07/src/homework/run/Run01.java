@@ -1,4 +1,4 @@
-package homework.controller;
+package homework.run;
 
 import java.util.Scanner;
 
@@ -24,35 +24,41 @@ public class Run01 {
 		Employee[] employee = new Employee[10];
 		Scanner sc = new Scanner(System.in);
 		int count = 0;
+		String answer;
 		
 		System.out.println("=== 사원 입력받기 ===");
 		while(true) {
-		
 			System.out.print("이름 : ");
-			employee[count].setName(sc.nextLine()); 
+			String name = sc.nextLine();
 			System.out.print("나이 : ");
-			employee[count].setAge(Integer.parseInt(sc.nextLine())); 
+			int age = Integer.parseInt(sc.nextLine());
 			System.out.print("키 : ");
-			employee[count].setHeight(Double.parseDouble(sc.nextLine()));
+			double height = Double.parseDouble(sc.nextLine());
 			System.out.print("몸무게 : ");
-			employee[count].setWeight(Double.parseDouble(sc.nextLine()));
+			double weight = Double.parseDouble(sc.nextLine());
 			System.out.print("급여 : ");
-			employee[count].setSalary(Integer.parseInt(sc.nextLine()));
+			int salary = Integer.parseInt(sc.nextLine());
 			System.out.print("부서 : ");
-			employee[count].setDept(sc.nextLine());
+			String dept = sc.nextLine();
+			employee[count] = new Employee(name, age, height, weight, salary, dept);
 			count++;
-			System.out.println("계속 추가하시겠습니까? ");
-			if ("n".equalsIgnoreCase(sc.nextLine())) break;
-			else if ("y".equalsIgnoreCase(sc.nextLine())) continue;
+			while (true) {
+				System.out.print("계속 추가하시겠습니까? ");
+				answer = sc.nextLine();
+				if ("n".equalsIgnoreCase(answer)) break;
+				else if ("y".equalsIgnoreCase(answer)) break;
+				else System.out.println("잘못된 문자입니다.");
+			}
+			if ("n".equalsIgnoreCase(answer)) break;
 		}
 		
-		for(Employee emp : employee) {
-			System.out.println("=== " + emp.getName() + " ===");
-			System.out.println("나이 : " + emp.getAge());
-			System.out.println("키 : " + emp.getHeight());
-			System.out.println("몸무게 : " + emp.getWeight());
-			System.out.println("급여 : " + emp.getSalary());
-			System.out.println("부서 : " + emp.getDept());
+		for(int i = 0; i < count; i++) {
+			System.out.println("=== " + employee[i].getName() + " ===");
+			System.out.println("나이 : " + employee[i].getAge());
+			System.out.println("키 : " + employee[i].getHeight());
+			System.out.println("몸무게 : " + employee[i].getWeight());
+			System.out.println("급여 : " + employee[i].getSalary());
+			System.out.println("부서 : " + employee[i].getDept());
 		}
 	}
 }

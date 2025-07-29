@@ -12,25 +12,22 @@ public class Student extends Person {
 		this.major = major;
 	}
 	
-	@Override
-	public String toString() {
-		return "";
-	}
-	
 	public int getGrade() {
 		return grade;
-	}
-	
+	}	
 	public void setGrade(int grade) {
 		this.grade = grade;
 	}
 	
 	public String getMajor() {
 		return major;
-	}
-	
+	}	
 	public void setMajor(String major) {
 		this.major = major;
 	}
 	
+	@Override
+	public String toString() {
+		return "Student [grade=" + grade + ", major=" + major + "]";
+	}
 }
