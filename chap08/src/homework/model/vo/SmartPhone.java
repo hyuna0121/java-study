@@ -1,34 +1,22 @@
 package homework.model.vo;
 
-public class SmartPhone implements CellPhone, TouchDisplay {
+public abstract class SmartPhone implements CellPhone, TouchDisplay {
 	public SmartPhone() {}
 	
 	@Override
-	public void makeCall() {
-		
-	}
+	public void makeCall() { System.out.println("번호를 누르고 통화버튼을 누름"); }
 
 	@Override
-	public void takeCall() {
-		
-	}
+	public void takeCall() { System.out.println("수신 버튼을 누름"); }
 
 	@Override
-	public void picture() {
-		
-	}
+	public abstract void picture();
 
 	@Override
-	public void touch() {
-		
-	}
+	public abstract void touch();
 
 	@Override
-	public void charge() {
-		
-	}
+	public abstract void charge();
 	
-	public void printMaker() {
-		
-	}
+	public abstract void printMaker();
 }

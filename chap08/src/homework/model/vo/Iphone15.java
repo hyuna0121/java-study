@@ -4,32 +4,20 @@ public class Iphone15 extends SmartPhone {
 	public Iphone15() {}
 
 	@Override
-	public void makeCall() {
-		super.makeCall();
-	}
+	public void makeCall() { super.makeCall(); }
 
 	@Override
-	public void takeCall() {
-		super.takeCall();
-	}
+	public void takeCall() { super.takeCall(); }
 
 	@Override
-	public void picture() {
-		super.picture();
-	}
+	public void picture() { System.out.println("1200, 1600만 화소 트리플 카메라"); }
 
 	@Override
-	public void touch() {
-		super.touch();
-	}
+	public void touch() { System.out.println("정전식"); }
 
 	@Override
-	public void charge() {
-		super.charge();
-	}
+	public void charge() { System.out.println("고속 충전"); }
 
 	@Override
-	public void printMaker() {
-		super.printMaker();
-	}
+	public void printMaker() { System.out.print("애플"); }
 }

@@ -11,12 +11,14 @@ public class Run04 {
 		smartPhones[1] = new Iphone15();
 		
 		for (SmartPhone smartPhone : smartPhones) {
+			smartPhone.printMaker();
+			System.out.println("에서 만들어 졌다.");
 			smartPhone.makeCall();
 			smartPhone.takeCall();
-			smartPhone.picture();
-			smartPhone.charge();
 			smartPhone.touch();
-			smartPhone.printMaker();
+			smartPhone.charge();
+			smartPhone.picture();
+			System.out.println();
 		}
 	}
 }

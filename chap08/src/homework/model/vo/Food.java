@@ -22,9 +22,8 @@ public class Food extends Product {
 	
 	@Override
 	public int calculatePrice() {
-		int price = super.calculatePrice();
-		price =(int) (price - (100 - calculateDiscountRate()) / 100.0);
-		System.out.println(price);
+		int price = super.getPrice();
+		price = (int) (price * (calculateDiscountRate()) / 100.0);
 		return price;
 	}
 }
