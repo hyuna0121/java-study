@@ -1,4 +1,4 @@
-package homework01;
+package homework;
 
 public class Person {
 	private String name;
@@ -16,7 +16,7 @@ public class Person {
 	
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", age=" + age + ", address=" + address + ", gender=" + gender + "]";
+		return "Person [name = " + name + ", age = " + age + ", address = " + address + ", gender = " + gender + "]";
 	}
 	
 	public String getName() { return name; }

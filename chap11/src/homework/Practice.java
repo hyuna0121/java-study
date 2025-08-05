@@ -1,4 +1,4 @@
-package homework01;
+package homework;
 
 public class Practice {
 	public static String takeState(String str) {
@@ -11,6 +11,6 @@ public class Practice {
 			}
 		}
 		System.out.println("null");
-		return "";
+		return null;
 	}
 }
