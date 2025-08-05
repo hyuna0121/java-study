@@ -57,6 +57,7 @@ public class Run {
 		System.out.print("예약 좌석 : ");
 		String reserved = sc.nextLine();
 		
+		// indexOf의 결과로 존재여부 파악 가능
 		if (seats.contains(reserved)) {
 			int index = seats.indexOf(reserved);
 			reserved += "(예약)";
