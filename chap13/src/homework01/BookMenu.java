@@ -85,8 +85,6 @@ public class BookMenu {
 	}
 	
 	public void deleteBook() {
-        // -> 같은 도서명을 가졌지만 저자명이 다른 경우
-        // 다른 도서명을 가졌지만 저자명이 같은 경우도 있을 수 있음
 		System.out.println("=== 도서 삭제 ===");
 		System.out.print("도서명 : ");
 		String title = sc.nextLine();
