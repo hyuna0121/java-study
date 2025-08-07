@@ -20,7 +20,6 @@ public class Quiz2 {
 			int readBytes = reader.read(buffer);
 			
 			writer.write(buffer, 0, readBytes);
-			writer.flush();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
