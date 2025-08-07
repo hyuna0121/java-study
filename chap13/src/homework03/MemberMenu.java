@@ -1,6 +1,10 @@
 package homework03;
 
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeMap;
 
 public class MemberMenu {
 	private Scanner sc = new Scanner(System.in);
@@ -101,15 +105,12 @@ public class MemberMenu {
 	}
 	
 	public void changeName() {
-		// 3-1.사용자에게 현재 저장되어 있는 이름을 출력해서 보여줌
-		// 		사용자로부터 변경할 이름을 입력 받음
-		// 		mc의 changeName()으로 id와 함께 넘김
-		// 		"이름 변경에 성공하였습니다."출력
 		System.out.println("=== 2. 이름 바꾸기 ===");
+		String id;
 		String name;
 		while (true) {
 			System.out.print("아이디 : ");
-			String id = sc.nextLine();
+			id = sc.nextLine();
 			System.out.print("비밀번호 : ");
 			String password = sc.nextLine();
 			
@@ -118,11 +119,22 @@ public class MemberMenu {
 			else break;
 		}
 		System.out.println("현재 설정된 이름 : " + name);
+		System.out.print("변경할 이름 : ");
+		String newName = sc.nextLine();
+		mc.changeName(id, newName);
+		System.out.println("이름 변경에 성공했습니다.");
 	}
 	
 	public void sameName() {
-		// 1. 검색할 이름을 받고 mc의 sameName()메소드로 넘김. 
-		// -> mc의 sameName()은 TreeMap<String,String>을 리턴
 		// 2. 반환 값을 가지고 entrySet()을 이용하여 ‘이름-아이디’ 형식으로 출력 
+		System.out.println("=== 3. 같은 이름 회원 찾기 ===");
+		System.out.print("검색할 이름 : ");
+		String searchName = sc.nextLine();
+		TreeMap<String, String> sameName = mc.sameName(searchName);
+		
+		Set<Map.Entry<String, String>> entrySet = sameName.entrySet();
+		for (Map.Entry<String, String> entry : entrySet) {
+			System.out.println(entry.getValue() + " - " + entry.getKey());
+		}
 	}
 }
