@@ -16,10 +16,22 @@ public class Quiz2 {
 	public static void main(String[] args) {
 		try (Reader reader = new FileReader("C:/Temp/test.txt");
 			 Writer writer = new FileWriter("C:/Temp/test_copy.txt")) {
-			char[] buffer = new char[100];
-			int readBytes = reader.read(buffer);
+			// 방법1 
+//			while (true) {
+//				int data = reader.read();
+//				if (data == -1) break;
+//				writer.write(data);
+//			}
 			
-			writer.write(buffer, 0, readBytes);
+			// 방법2 : 파일 크기가 클 경우 배열을 이용하여 효율적으로 처리하기
+			char[] buffer = new char[100];
+			int readChars;
+			
+			while ((readChars = reader.read(buffer)) != -1) {
+				writer.write(buffer, 0, readChars);
+			}
+			
+			System.out.println("파일 복사가 완료되었습니다.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
