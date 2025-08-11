@@ -38,7 +38,7 @@ public class FileMenu {
 			String content = sc.nextLine();
 			
 			if (content.equals("ex끝it")) break;
-			sb.append(content);
+			sb.append(content + "\n");
 		}
 		
 		while (true) {
@@ -71,6 +71,22 @@ public class FileMenu {
 	}
 	
 	public void fileEdit() {
+		//fc의 fileEdit()에 파일 명과 StringBuilder 전달 
+		System.out.print("수정할 파일 명 : ");
+		String name = sc.nextLine();
+		if (!fc.checkName(name)) return;
 		
+		StringBuilder sb = new StringBuilder();
+		while (true) {
+			System.out.println("파일에 저장할 내용을 입력하세요.");
+			System.out.println("ex끝it 이라고 입력하면 종료됩니다.");
+			System.out.print("내용 : ");
+			String content = sc.nextLine();
+			
+			if (content.equals("ex끝it")) break;
+			sb.append(content + "\n");
+		}
+		
+		fc.fileEdit(name, sb);
 	}
 }

@@ -24,18 +24,23 @@ public class FileDAO {
 	}
 	
 	public StringBuilder fileOpen(String file) {
-		// 매개변수로 들어온 file로 파일을 찾아 StringBuilder에 값들 저장하여 반환 
 		StringBuilder sb = new StringBuilder();
 		File note = new File("C:/homework/" + file);
+		
 		try (Reader reader = new FileReader(note)) {
-			sb.append(reader.read());
+			int data;
+			while ((data = reader.read()) != -1) {
+				sb.append((char) data);
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 		return sb;
 	}
 	
 	public void fileEdit(String file, String s) {
-		
+		// 매개변수로 들어온 file을 파일 명으로 이용하여 파일을 찾고 
+		// String에 써서 저장하되 이어서 저장될 수 있도록 함 
 	}
 }
